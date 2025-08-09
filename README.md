@@ -1,4 +1,4 @@
-# 🗓️ Calendar App
+# 🗓️ Appointment Booker App
 
 A simple calendar-based appointment scheduling app built with:
 
