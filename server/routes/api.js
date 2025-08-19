@@ -1,5 +1,5 @@
 
-const express  =require('express')
+const express =require('express')
 const router =express.Router()
 const db = require('../models/db')
 const bcrypt = require('bcryptjs')
@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken')
 const {authenticateToken,authorizeRole} = require('../middleware/auth')
 
 router.get('/',(req,res)=>{
-    res.send('Hello from WoundTech!!')
+    res.json({message:'Hello from WoundTech!!'})
 })
 
 router.get('/clinicians',(req,res)=>{

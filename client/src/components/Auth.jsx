@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { loginSuccess } from '../slice/authSlice';
@@ -36,20 +36,16 @@ e.preventDefault();
         if(data?.mode ==='register'){
             let payload = {name : data?.name,username : data?.username,password : data?.password,role : data?.role}
             payload.role ==='patient' ? payload.date_of_birth= data?.dob : payload.speciality = data?.speciality
-            const res =await axios.post(API+'/register',payload,
-           
-            )
-           
+            const res =await axios.post(API+'/register',payload,         
+            )         
         }
         else{
             let payload = {username : data?.username,password : data?.password,role : data?.role}
             const res =await axios.post(API+'/login',payload)          
-            const loginres = dispatch(loginSuccess(res?.data))
-          
+            dispatch(loginSuccess(res?.data))          
             navigate('/')
         }
     }
-
 
     useEffect(()=>{
        setData({...data,mode :path})

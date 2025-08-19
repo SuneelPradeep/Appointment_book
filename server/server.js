@@ -11,7 +11,5 @@ app.use('/',API)
 
 
 app.listen(PORT,()=>{
-    res.send('Hello from WoundTech')
-
-    
+    console.info('connected to Server')  
 })
