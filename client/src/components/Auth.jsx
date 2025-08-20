@@ -61,9 +61,9 @@ e.preventDefault();
         <>
        <div className='py-4 px-5 flex flex-col gap-3 '>
        <label className='text-left'> Username</label>
-       <input name='username' className='outline-none border-gray-400 border bg-black rounded-lg p-1 ' value={data?.username} onChange={handleData} />
+       <input name='username' className='outline-none border-gray-400 border text-white bg-black rounded-lg p-1 ' value={data?.username} onChange={handleData} />
        <label className='text-left mt-2'> Password</label>
-       <input type='password' name='password' className='bg-black outline-none   rounded-lg p-1' value={data?.password} onChange={handleData} />
+       <input type='password' name='password' className='text-white bg-black outline-none   rounded-lg p-1' value={data?.password} onChange={handleData} />
        </div>
         
        <div className='pt-1 flex items-center justify-center gap-10'>
@@ -80,20 +80,20 @@ e.preventDefault();
         <>   
        <div className='py-4 px-5 flex flex-col gap-3 '>
        <label className='text-left'> Name</label>
-       <input name='name' autoComplete='off' className='outline-none border-gray-400 border bg-black rounded-lg p-1 ' value={data?.name} onChange={handleData} />
+       <input name='name' autoComplete='off' className='outline-none border-gray-400 border text-white bg-black rounded-lg p-1 ' value={data?.name} onChange={handleData} />
      
        <label className='text-left'> Username</label>
-       <input name='username' className='outline-none border-gray-400 border bg-black rounded-lg p-1 ' value={data?.username} onChange={handleData} />
+       <input name='username' className='outline-none border-gray-400 border text-white bg-black rounded-lg p-1 ' value={data?.username} onChange={handleData} />
        <label className='text-left mt-2'> Password</label>
-       <input type='password'  value={data?.password} onChange={handleData} name='password' className='bg-black outline-none   rounded-lg p-1' />
+       <input type='password'  value={data?.password} onChange={handleData} name='password' className='text-white bg-black outline-none   rounded-lg p-1' />
      
       {data?.role==='clinician' && 
       <> <label className='text-left mt-2'> Speciality</label>
-       <input name='speciality' className='bg-black outline-none   rounded-lg p-1' /></>}
+       <input name='speciality' className='text-white bg-black outline-none   rounded-lg p-1' /></>}
        
        {data?.role==='patient' &&<>
        <label className='text-left'> Date of Birth</label>
-       <input type='date' className='outline-none border-gray-400 border bg-black rounded-lg p-1 ' name='dob' value={data?.dob} onChange={handleData} />
+       <input type='date' className='outline-none border-gray-400 border text-white bg-black rounded-lg p-1 ' name='dob' value={data?.dob} onChange={handleData} />
        </>}
        </div>
        

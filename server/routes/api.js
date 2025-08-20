@@ -39,7 +39,7 @@ res.status(400).json({ error:'Invalid role'})
                 ref_id = await dbInsert('INSERT INTO clinicians (name,speciality) VALUES (?,?)',[name,speciality ||null])
             }
             else{
-                ref_id = await dbInsert('INSERT INTO patients (name,date_of_birth) VALUES (?,?)',[name,date_of_birth || null])
+                ref_id = await dbInsert('INSERT INTO patients (name,dob) VALUES (?,?)',[name,date_of_birth || null])
             }
 
             await dbInsert('INSERT INTO users (username,password,role,ref_id) VALUES (?,?,?,?)',[username,hashedPassword,role,ref_id])
